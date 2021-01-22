@@ -17,7 +17,7 @@ function kilometerToMeter(kilometer){
 // Second problem -- Budget Calculator
 
 function budgetCalculator(watch, mobile, laptop){
-    if(watch < 0){ // for invalid input
+    if (watch < 0){ // for invalid input
   
         console.log('Invalid Quantity')
     
@@ -25,14 +25,14 @@ function budgetCalculator(watch, mobile, laptop){
         var watchAmount = watch * 50;
       }
 
-    if(mobile < 0){// For invalid input
+    if (mobile < 0){// For invalid input
   
         console.log('Invalid Quantity')
     
       } else{
         var mobileAmount = mobile * 100;
       }
-    if(laptop < 0){// For invalid input
+    if (laptop < 0){// For invalid input
   
         console.log('Invalid Quantity')
     
@@ -48,16 +48,16 @@ function budgetCalculator(watch, mobile, laptop){
 function hotelCost(dayStay){
     var amount
 
-    if(dayStay< 0){ // For negetive input
+    if (dayStay< 0){ // For negetive input
       amount = "It's not possible"  
     }
-    else if(dayStay <= 10){  
+    else if (dayStay <= 10){  
       amount = dayStay * 100
     }
-    else if(dayStay <=20){
+    else if (dayStay <=20){
         amount = 10 * 100 + (dayStay - 10) * 80 
     }
-    else if(dayStay > 20){ 
+    else if (dayStay > 20){ 
       amount = 10 * 100 + 10 * 80 + (dayStay - 20) * 50
     }  
     return amount  
@@ -66,14 +66,19 @@ function hotelCost(dayStay){
 // Fourth Problem -- Mega Friend 
 
 function megaFriend(name){
-    var letter = 0;
- 
-    for(var i=0; i< name.length; i++){
-     if(name[i].length > letter){  
-        letter = name[i].length;
-        var biggestName = i;  
+    var letter = 0
+    var emtyName = ""
+
+  if (name.length == 0){// For emty input shows error
+    return 'Sorry there is no name!!'
+  }
+    for (var i=0; i< name.length; i++){
+     if (name[i].length > letter){  
+        letter = name[i].length
+        var biggestName = i 
       }  
     } 
-    letter = name[biggestName];  
-    return letter;  
+    letter = name[biggestName] 
+    return letter 
   }
+  
