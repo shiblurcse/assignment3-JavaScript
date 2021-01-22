@@ -67,9 +67,9 @@ function hotelCost(dayStay){
 
 function megaFriend(name){
     var letter = 0
-    var emtyName = ""
+    var emptyName = ""
 
-  if (name.length == 0){// For emty input shows error
+  if (name.length == 0){// For empty input shows error
     return 'Sorry there is no name!!'
   }
     for (var i=0; i< name.length; i++){
