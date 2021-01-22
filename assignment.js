@@ -67,7 +67,6 @@ function hotelCost(dayStay){
 
 function megaFriend(name){
     var letter = 0;
-    var largeName = "";
  
     for(var i=0; i< name.length; i++){
      if(name[i].length > letter){  
